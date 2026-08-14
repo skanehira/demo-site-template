@@ -1,7 +1,7 @@
 {
   "name": "__PROJECT_NAME__",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "deploy": "vp build && wrangler deploy",

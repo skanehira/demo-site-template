@@ -3,6 +3,6 @@
   "name": "__PROJECT_NAME__",
   "compatibility_date": "__COMPATIBILITY_DATE__",
   "assets": {
-    "directory": "./dist/"
-  }
+    "directory": "./dist/",
+  },
 }
