@@ -29,15 +29,15 @@ vp dev
 
 ## 同梱スクリプト
 
-| コマンド | 内容 |
-| --- | --- |
-| `vp dev` | 開発サーバ |
-| `vp test` | テスト実行 |
+| コマンド                      | 内容                                                             |
+| ----------------------------- | ---------------------------------------------------------------- |
+| `vp dev`                      | 開発サーバ                                                       |
+| `vp test`                     | テスト実行                                                       |
 | `vp check --no-lint --no-fmt` | TypeScript 型チェックのみ（lint/fmt はテンプレ未調整のため除外） |
-| `vp build` | 本番ビルド |
-| `vp preview` | 本番ビルドのプレビュー |
-| `pnpm deploy` | `vp build && wrangler deploy` |
-| `pnpm deploy:dry-run` | `vp build && wrangler deploy --dry-run` |
+| `vp build`                    | 本番ビルド                                                       |
+| `vp preview`                  | 本番ビルドのプレビュー                                           |
+| `pnpm deploy`                 | `vp build && wrangler deploy`                                    |
+| `pnpm deploy:dry-run`         | `vp build && wrangler deploy --dry-run`                          |
 
 ## デプロイ
 
