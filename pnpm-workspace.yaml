@@ -19,3 +19,12 @@ overrides:
   postcss: ">=8.5.23"
   # GHSA-2v37-7h3g-55p8: vite -> postcss -> nanoid@3.3.17 (vulnerable, patched >=3.3.18)
   nanoid: "^3.3.18"
+  vite@*: "catalog:"
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
+  vite-plus: 1.0.0
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: "*"
