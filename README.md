@@ -29,15 +29,21 @@ vp dev
 
 ## 同梱スクリプト
 
-| コマンド                      | 内容                                                             |
-| ----------------------------- | ---------------------------------------------------------------- |
-| `vp dev`                      | 開発サーバ                                                       |
-| `vp test`                     | テスト実行                                                       |
-| `vp check --no-lint --no-fmt` | TypeScript 型チェックのみ（lint/fmt はテンプレ未調整のため除外） |
-| `vp build`                    | 本番ビルド                                                       |
-| `vp preview`                  | 本番ビルドのプレビュー                                           |
-| `pnpm deploy`                 | `vp build && wrangler deploy`                                    |
-| `pnpm deploy:dry-run`         | `vp build && wrangler deploy --dry-run`                          |
+| コマンド              | 内容                                                           |
+| --------------------- | -------------------------------------------------------------- |
+| `vp dev`              | 開発サーバ                                                     |
+| `vp test`             | テスト実行                                                     |
+| `vp check --no-fmt`   | lint + TypeScript 型チェック（fmt はテンプレ未調整のため除外） |
+| `vp build`            | 本番ビルド                                                     |
+| `vp preview`          | 本番ビルドのプレビュー                                         |
+| `pnpm deploy`         | `vp build && wrangler deploy`                                  |
+| `pnpm deploy:dry-run` | `vp build && wrangler deploy --dry-run`                        |
+
+## Lint
+
+`vite.config.ts` の `lint.rules` が `no-restricted-imports` で `react` からの `useEffect` の import をエラーにする。
+違反は `vp lint` / `vp check --no-fmt` と CI で検出される。
+外部システムとの同期などで例外が必要な行は、import の直前に `// oxlint-disable-next-line no-restricted-imports` を付けて理由を書く。
 
 ## デプロイ
 
